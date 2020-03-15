@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- La largueur de la page = la largeur de l'appareil sur lequel la page est lue -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <img src="./img/logoAfrique.png" id="logo"/>
+        <h1>Famille Thielens Blog</h1>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" title="vers la page d'accueil">Accueil</a></li>
+                <li><a href="lettre.html" title="vers la page d'accueil">Lettres</a></li>
+                <li><a href="galleries.html" title="Galleries">Galleries</a></li>
+                <li><a href="formulaire.html" title="me contacter">contacter</a></li>
+            </ul>
+        </nav>
+        <button id="menuHamburger"><svg className="hamburger" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white"></path></svg></button>
+    </header>
+    
+   <section id="contenuPage" class="contact">
+    <main > 
+    <h1>Contactez-nous</h1>
+    <p>Merci de compléter le formulaire suivant pour me contacter. Tous les champs du formulaire sont requis.</p>
+    <form id="formulaireContact" action="formulaireEnvoye.html">
+        <div>
+            <div>
+                <!-- label : lier le texte à l'input / for="identifiant de l'input" -->
+                <label for="prenom">Prénom</label>
+                <!-- Name permet de récupérer les valeurs des champs du formulaire -->
+                <input type="text" name="prenom" id="prenom" required>
+            </div>
+            <div>
+                <label for="nomFamille">Nom de famille</label>
+                <input type="text" name="nomFamille" id="nomFamille" required>
+            </div>
+            <div>
+                <label for="email">Votre e-mail</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message" required></textarea>
+            </div>
+        </div>
+        <!-- Privilégier un bouton plutot qu'un input -->
+        <button type="submit">Envoyer</button>
+    </form>
+</main>
+</section>
+
+
+</body>
+</html>
